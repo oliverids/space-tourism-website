@@ -1,7 +1,11 @@
 header {
     position: fixed;
+    top: 0;
     width: 100%;
     padding: 16px 0;
+    z-index: 1000px;
+    background: $preto;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, .2);
 
     nav {
         position: relative;
@@ -82,6 +86,7 @@ header {
                     li {
                         margin-bottom: 20px;
                         font-family: $barlow-cond;
+                        text-shadow: 0 0 9px #000;
     
                         a {
                             color: $branco;
