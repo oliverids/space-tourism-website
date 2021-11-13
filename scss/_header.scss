@@ -1,0 +1,102 @@
+header {
+    position: fixed;
+    width: 100%;
+    padding: 16px 0;
+
+    nav {
+        position: relative;
+
+        .container {
+            justify-content: flex-end;
+
+            #toggleMenu {
+                width: 48px;
+                height: 48px;
+
+                div {
+                    width: 48px;
+                    height: 6px;
+                    border-radius: 1px;
+                    background: $branco;
+                    transition: all 0.2s ease-in-out;
+                    position: relative;
+                    display: flex;
+
+                    &::before,
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        width: 48px;
+                        height: 6px;
+                        border-radius: 2px;
+                        background: $branco;
+                        transition: all 0.2s ease-in-out;
+                    }
+
+                    &::before {
+                        transform: translateY(-14px);
+                        display: block;
+                    }
+
+                    &::after {
+                        transform: translateY(14px);
+                        display: block;
+                    }
+                }
+
+                &.ativo {
+                    div {
+                        transform: translateX(-50px);
+                        background: transparent;
+
+                        &::before {
+                            transform: rotate(45deg) translate(35px, -35px);
+                        }
+                        &::after {
+                            transform: rotate(-45deg) translate(35px, 35px);
+                        }
+                    }
+                }
+            }
+
+            #dropdown {
+                position: absolute;
+                top: 64px;
+                z-index: 1000px;
+                right: 0;
+                height: 100vh;
+                width: 180px;
+                padding: 20px;
+                backdrop-filter: blur(6px);
+                visibility: hidden;
+                opacity: 0;
+                transform: translateX(180px);
+                transition: all 0.3s ease-in-out;
+                box-shadow: 0 0 60px 10px rgba(0, 0, 0, 0.2);
+
+                li {
+                    margin-bottom: 20px;
+
+                    a {
+                        color: $branco;
+                        padding: 10px 4px;
+                        text-transform: uppercase;
+                        display: block;
+
+                        span {
+                            font-weight: bold;
+                            margin-right: 8px;
+                        }
+                    }
+                }
+
+                &.ativo {
+                    visibility: visible;
+                    opacity: 1;
+                    transform: translateX(0);
+                    transition: all 0.3s ease-in-out;
+                }
+            }
+        }
+    }
+}

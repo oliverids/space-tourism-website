@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+$branco: rgb(237, 237, 237);
+
+// *:focus {
+//     outline-color: $azul;
+// }
+
+body {
+    font-size: 16px;
+    background-image: url("../img/fundo/background-home-tablet.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.container {
+    display: flex;
+    padding: 0 1rem;
+    transition: 0.3s ease-in-out;
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+h1,
+p {
+    line-height: 1.5;
+}
+
+h1 {
+    font-weight: 700;
+}
+
+p {
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
