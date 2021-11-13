@@ -4,13 +4,8 @@ header {
     width: 100%;
     padding: 16px 0;
     z-index: 1000px;
-    background: $preto;
+    background: rgba(0, 0, 0, 0.4);
     box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
-
-    @media only screen and (min-width: 768px) {
-        background: none;
-        box-shadow: none;
-    }
 
     nav {
         position: relative;

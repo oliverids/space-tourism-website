@@ -12,11 +12,11 @@ main {
         align-items: center;
         text-align: center;
 
-        @media only screen and (min-width: 768px) {
+        @media only screen and (min-width: 1200px) {
             flex-direction: row;
             text-align: left;
             align-items: flex-end;
-            justify-content: space-around;
+            justify-content: space-between;
         }
 
         .info {
@@ -31,9 +31,7 @@ main {
 
                 h1 {
                     font-size: 5rem;
-                    font-family: $bellefair;
                     color: $branco;
-                    font-weight: 400;
                     margin-bottom: 16px;
                 }
             }
