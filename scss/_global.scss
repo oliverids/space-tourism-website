@@ -28,22 +28,26 @@ html {
     scroll-behavior: smooth;
 }
 
-// *:focus {
-//     outline-color: $azul;
-// }
-
 body {
     font-size: 16px;
     background-image: url("../img/fundo/background-home-tablet.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
+
+    @media only screen and (min-width: 768px) {
+        background-image: url("../img/fundo/background-home-desktop.jpg");
+    }
 }
 
 .container {
     display: flex;
     padding: 0 1rem;
     transition: 0.3s ease-in-out;
+
+    @media only screen and (min-width: 768px) {
+        padding: 0 2rem;
+    }
 }
 
 button {

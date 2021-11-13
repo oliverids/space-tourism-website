@@ -2,34 +2,47 @@ main {
     margin-top: 124px;
     color: $branco;
 
+    @media only screen and (min-width: 768px) {
+        margin-top: 220px;
+    }
+
     .container {
         flex-direction: column;
         justify-content: center;
         align-items: center;
         text-align: center;
 
-        div {
-            text-transform: uppercase;
-
-            p {
-                font-family: $barlow-cond;
-                letter-spacing: 2.7px;
-                margin-bottom: 16px;
-            }
-
-            h1 {
-                font-size: 5rem;
-                font-family: $bellefair;
-                color: $branco;
-                font-weight: 400;
-                margin-bottom: 16px;
-            }
+        @media only screen and (min-width: 768px) {
+            flex-direction: row;
+            text-align: left;
+            align-items: flex-end;
+            justify-content: space-around;
         }
 
-        p {
-            font-family: $barlow;
-            line-height: 1.5;
-            max-width: 450px;
+        .info {
+            div {
+                text-transform: uppercase;
+
+                p {
+                    font-family: $barlow-cond;
+                    letter-spacing: 2.7px;
+                    margin-bottom: 16px;
+                }
+
+                h1 {
+                    font-size: 5rem;
+                    font-family: $bellefair;
+                    color: $branco;
+                    font-weight: 400;
+                    margin-bottom: 16px;
+                }
+            }
+
+            p {
+                font-family: $barlow;
+                line-height: 1.5;
+                max-width: 450px;
+            }
         }
 
         #explore {
@@ -42,6 +55,7 @@ main {
             justify-content: center;
             margin: 80px auto;
             transition: 0.3s ease-in-out;
+
             span {
                 text-align: center;
                 margin: auto;
@@ -50,6 +64,12 @@ main {
                 font-size: 1.25rem;
                 letter-spacing: 2.25px;
                 text-transform: uppercase;
+            }
+
+            @media only screen and (min-width: 768px) {
+                margin: 0;
+                width: 200px;
+                height: 200px;
             }
 
             &:hover {

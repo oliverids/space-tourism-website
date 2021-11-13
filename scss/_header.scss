@@ -5,7 +5,12 @@ header {
     padding: 16px 0;
     z-index: 1000px;
     background: $preto;
-    box-shadow: 0 10px 24px rgba(0, 0, 0, .2);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+
+    @media only screen and (min-width: 768px) {
+        background: none;
+        box-shadow: none;
+    }
 
     nav {
         position: relative;
@@ -18,6 +23,10 @@ header {
                 width: 48px;
                 height: 48px;
                 z-index: 1200;
+
+                @media only screen and (min-width: 768px) {
+                    display: none;
+                }
 
                 div {
                     width: 48px;
@@ -80,24 +89,80 @@ header {
                 transition: all 0.3s ease-in-out;
                 box-shadow: 0 0 60px 10px rgba(0, 0, 0, 0.2);
 
+                @media only screen and (min-width: 768px) {
+                    position: inherit;
+                    display: block;
+                    visibility: visible;
+                    opacity: 1;
+                    transform: translateX(0px);
+                    height: auto;
+                    width: 450px;
+                    padding: 24px 32px;
+                    margin-right: -2rem;
+                }
+
+                @media only screen and (min-width: 1000px) {
+                    width: 830px;
+                    display: flex;
+                    justify-content: center;
+                    // margin-right: -1rem;
+                }
+
                 ul {
                     transform: translateY(50%);
+
+                    @media only screen and (min-width: 768px) {
+                        transform: translateY(0px);
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                    }
+
+                    @media only screen and (min-width: 1000px) {
+                        width: 600px;
+                    }
 
                     li {
                         margin-bottom: 20px;
                         font-family: $barlow-cond;
                         text-shadow: 0 0 9px #000;
-    
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+
+                        @media only screen and (min-width: 768px) {
+                            text-shadow: 0 0 12px #000;
+                        }
+
+                        @media only screen and (min-width: 768px) {
+                            margin-bottom: 0;
+                        }
+
                         a {
                             color: $branco;
                             padding: 10px 4px;
                             text-transform: uppercase;
                             display: block;
                             width: 100%;
-    
+
                             span {
                                 font-weight: bold;
                                 margin-right: 8px;
+                            }
+                        }
+
+                        &.active::after {
+                            position: absolute;
+                            content: "";
+                            display: block;
+                            height: 100%;
+                            right: 0;
+                            border: 2px solid $branco;
+
+                            @media only screen and (min-width: 768px) {
+                                width: 100%;
+                                height: 0;
+                                bottom: -24px;
                             }
                         }
                     }
