@@ -1,3 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;500&family=Bellefair&display=swap');
+
+//fontes
+$barlow: 'Barlow', sans-serif;
+$barlow-cond: 'Barlow Condensed', sans-serif;
+$bellefair: 'Bellefair', serif;
+
+//cores
+$branco: rgb(255, 255, 255);
+$lilas: rgb(208, 214, 249);
+$preto: rgb(11, 13, 23);
+
 * {
     margin: 0;
     padding: 0;
@@ -15,8 +27,6 @@ ul {
 html {
     scroll-behavior: smooth;
 }
-
-$branco: rgb(237, 237, 237);
 
 // *:focus {
 //     outline-color: $azul;
