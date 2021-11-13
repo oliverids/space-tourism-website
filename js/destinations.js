@@ -28,4 +28,13 @@ destinations.forEach(e => {
     });
 });
 
+window.addEventListener('click', e => {
+    let hideBtns = document.querySelectorAll('#menu li button');
+    if (dropdownMenu.classList.contains('ativo')) {
+        hideBtns.forEach(e => e.classList.add('hide'));
+    } else {
+        hideBtns.forEach(e => e.classList.remove('hide'))
+    }
+});
+
 

@@ -1,0 +1,156 @@
+body {
+    background-image: url("../img/fundo/background-crew-tablet.jpg");
+
+    @media only screen and (min-width: 768px) {
+        background-image: url("../img/fundo/background-crew-desktop.jpg");
+    }
+}
+
+section {
+    margin-top: 124px;
+    color: $branco;
+
+    @media only screen and (min-width: 768px) {
+        margin-top: 160px;
+    }
+
+    .container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+
+        h2 {
+            font-family: $barlow-cond;
+            font-weight: 400;
+            font-size: 1rem;
+            letter-spacing: 2.7px;
+
+            @media only screen and (min-width: 1200px) {
+                margin-bottom: 2rem;
+            }
+
+            span {
+                opacity: 0.5;
+                margin-right: 12px;
+            }
+        }
+
+        div {
+            @media only screen and (min-width: 1200px) {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+
+        .pick {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            @media only screen and (min-width: 768px) {
+                order: 2;
+            }
+
+            @media only screen and (min-width: 1200px) {
+                width: 50%;
+            }
+
+            #person {
+                max-width: 180px;
+                margin: 2rem 0;
+                border-bottom: 1px solid $lilas;
+
+                @media only screen and (min-width: 768px) {
+                    border-bottom: 0;
+                    max-width: 450px;
+                    margin: 2rem 0 0 0;
+                }
+
+                @media only screen and (min-width: 1200px) {
+                    margin: 0;
+                }
+            }
+        }
+
+        .info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding-bottom: 60px;
+
+            @media only screen and (min-width: 768px) {
+                order: 1;
+                padding-bottom: 0;
+            }
+
+            @media only screen and (min-width: 1200px) {
+                text-align: left;
+                justify-content: flex-start;
+                align-items: flex-start;
+            }
+
+            .slide {
+                margin-bottom: 2rem;
+
+                @media only screen and (min-width: 768px) {
+                    order: 4;
+                    margin-bottom: 0;
+                    margin-top: 2rem;
+                }
+
+                @media only screen and (min-width: 1200px) {
+                    margin: 2rem 0 0 0;
+                }
+            }
+
+            #role {
+                color: $lilas;
+                font-family: $bellefair;
+                margin-bottom: 0.4rem;
+
+                @media only screen and (min-width: 768px) {
+                    order: 1;
+                    margin-top: 3rem;
+                }
+            }
+
+            #name {
+                font-family: $bellefair;
+                color: $branco;
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+
+                @media only screen and (min-width: 768px) {
+                    order: 2;
+                    font-size: 40px;
+                }
+
+                @media only screen and (min-width: 1200px) {
+                    font-size: 56px;
+                }
+            }
+
+            #bio {
+                font-family: $barlow;
+                color: $lilas;
+                text-transform: initial;
+                max-width: 500px;
+
+                @media only screen and (min-width: 768px) {
+                    order: 3;
+                }
+
+                @media only screen and (min-width: 1200px) {
+                    max-width: 450px;
+                }
+            }
+        }
+    }
+}

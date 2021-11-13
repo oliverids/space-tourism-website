@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;500&family=Bellefair&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;500&family=Bellefair&display=swap");
 
 //fontes
-$barlow: 'Barlow', sans-serif;
-$barlow-cond: 'Barlow Condensed', sans-serif;
-$bellefair: 'Bellefair', serif;
+$barlow: "Barlow", sans-serif;
+$barlow-cond: "Barlow Condensed", sans-serif;
+$bellefair: "Bellefair", serif;
 
 //cores
 $branco: rgb(255, 255, 255);
@@ -34,6 +34,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
+    transition: background-image 0.3s ease-in-out;
 
     @media only screen and (min-width: 768px) {
         background-image: url("../img/fundo/background-home-desktop.jpg");
@@ -86,5 +87,32 @@ a {
     &:hover {
         text-decoration: underline;
         text-decoration-color: currentColor;
+    }
+}
+
+.slide {
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+    margin: 0 auto;
+
+    &.hide {
+        z-index: -1;
+    }
+    
+    li {
+        button {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: $lilas;
+            opacity: 0.5;
+
+            &.active {
+                background: $branco;
+                opacity: 1;
+                transition: 0.3s ease-in-out;
+            }
+        }
     }
 }

@@ -9,7 +9,7 @@ header {
 
     nav {
         position: relative;
-
+        
         .container {
             justify-content: space-between;
             align-items: center;
@@ -72,7 +72,7 @@ header {
             #dropdown {
                 position: absolute;
                 top: -16px;
-                z-index: 1000px;
+                z-index: 1000;
                 right: 0;
                 height: 100vh;
                 width: 220px;
