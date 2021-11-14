@@ -4,8 +4,8 @@ header {
     width: 100%;
     padding: 16px 0;
     z-index: 1000px;
-    background: rgba(0, 0, 0, 0.4);
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(181deg, rgba(0, 0, 0, 0.4), transparent);
+    z-index: 9999;
 
     nav {
         position: relative;
