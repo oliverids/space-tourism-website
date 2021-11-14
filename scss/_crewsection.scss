@@ -46,6 +46,17 @@ section {
             }
         }
 
+        @keyframes anima {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
         .pick {
             display: flex;
             flex-direction: column;
@@ -64,6 +75,10 @@ section {
                 max-width: 180px;
                 margin: 2rem 0;
                 border-bottom: 1px solid $lilas;
+
+                img.anima {
+                    animation: anima 0.3s forwards ease-in-out;
+                }
 
                 @media only screen and (min-width: 768px) {
                     border-bottom: 0;
@@ -84,6 +99,7 @@ section {
             justify-content: center;
             text-align: center;
             padding-bottom: 60px;
+            animation: anima 0.3s forwards ease-in-out;
 
             @media only screen and (min-width: 768px) {
                 order: 1;
@@ -97,7 +113,30 @@ section {
             }
 
             .slide {
-                margin-bottom: 2rem;
+                display: flex;
+                justify-content: space-between;
+                width: 160px;
+                margin: 0 auto 2rem auto;
+
+                &.hide {
+                    z-index: -1;
+                }
+
+                li {
+                    button {
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 50%;
+                        background: $lilas;
+                        opacity: 0.5;
+
+                        &.active {
+                            background: $branco;
+                            opacity: 1;
+                            transition: 0.3s ease-in-out;
+                        }
+                    }
+                }
 
                 @media only screen and (min-width: 768px) {
                     order: 4;
@@ -115,6 +154,10 @@ section {
                 font-family: $bellefair;
                 margin-bottom: 0.4rem;
 
+                &.anima {
+                    animation: anima 0.3s forwards ease-in-out;
+                }
+
                 @media only screen and (min-width: 768px) {
                     order: 1;
                     margin-top: 3rem;
@@ -126,6 +169,10 @@ section {
                 color: $branco;
                 font-size: 1.5rem;
                 margin-bottom: 1rem;
+
+                &.anima {
+                    animation: anima 0.3s forwards ease-in-out;
+                }
 
                 @media only screen and (min-width: 768px) {
                     order: 2;
@@ -142,6 +189,10 @@ section {
                 color: $lilas;
                 text-transform: initial;
                 max-width: 500px;
+
+                &.anima {
+                    animation: anima 0.3s forwards ease-in-out;
+                }
 
                 @media only screen and (min-width: 768px) {
                     order: 3;

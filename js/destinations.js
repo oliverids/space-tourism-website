@@ -16,6 +16,11 @@ async function fetchInfo(index) {
         text.innerText = r.destinations[item].description;
         avgDist.innerText = r.destinations[item].distance;
         travelTime.innerText = r.destinations[item].travel;
+
+        [image, planet, text, avgDist, travelTime].forEach(e => e.classList.add('anima'));
+        setTimeout(() => {
+        [image, planet, text, avgDist, travelTime].forEach(e => e.classList.remove('anima'));
+        }, 400);
     });
 };
 

@@ -16,18 +16,13 @@ async function fetchInfo(index) {
     fetch('../data.json').then(r => r.json()).then(r => {
         const image = document.querySelector('#person img'),
             role = document.getElementById('role'),
-            nome = document.getElementById('name'),
+            name = document.getElementById('name'),
             bio = document.getElementById('bio');
 
         image.src = r.crew[item].images.png;
         role.innerText = r.crew[item].role;
-        nome.innerText = r.crew[item].name;
+        name.innerText = r.crew[item].name;
         bio.innerText = r.crew[item].bio;
-
-        [image, role, nome, bio].forEach(e => e.classList.add('anima'));
-        setTimeout(() => {
-            [image, role, nome, bio].forEach(e => e.classList.remove('anima'));
-        }, 400);
     });
 };
 
