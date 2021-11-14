@@ -1,0 +1,114 @@
+body {
+    background-image: url("../img/fundo/background-technology-tablet.jpg");
+
+    @media only screen and (min-width: 768px) {
+        background-image: url("../img/fundo/background-technology-desktop.jpg");
+    }
+}
+
+section {
+    margin-top: 124px;
+    color: $branco;
+
+    @media only screen and (min-width: 768px) {
+        margin-top: 160px;
+    }
+
+    .pic-tech {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+        padding: 0;
+
+        h2 {
+            font-family: $barlow-cond;
+            font-weight: 400;
+            font-size: 1rem;
+            letter-spacing: 2.7px;
+
+            @media only screen and (min-width: 1200px) {
+                margin-bottom: 2rem;
+            }
+
+            span {
+                opacity: 0.5;
+                margin-right: 12px;
+            }
+        }
+
+        .content {
+            width: 100%;
+            margin-top: 2rem;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+
+    .content-tech {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 60px;
+
+        #slide-tech {
+            width: 160px;
+            margin: 2rem auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            li {
+                button {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    border: 0.2px solid $lilas;
+                    color: $branco;
+                    transition: all 0.3s ease-in-out;
+
+                    &.active {
+                        background: $branco;
+                        border-color: $branco;
+                        color: $preto;
+                        transition: all 0.3s ease-in-out;
+                    }
+                }
+            }
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            span {
+                font-size: 1rem;
+                text-transform: uppercase;
+                color: $lilas;
+                font-family: $barlow-cond;
+                letter-spacing: 2.4px;
+                margin-bottom: 0.8rem;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+                text-transform: uppercase;
+            }
+
+            #text {
+                max-width: 460px;
+                font-family: $barlow;
+                color: $lilas;
+            }
+        }
+    }
+}

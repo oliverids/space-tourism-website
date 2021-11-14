@@ -25,17 +25,6 @@ section {
             justify-content: space-between;
         }
 
-        @keyframes anima {
-            from {
-                opacity: 0;
-                transform: translateX(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
         .pick {
             display: flex;
             flex-direction: column;
@@ -59,8 +48,13 @@ section {
                 height: 170px;
                 margin: 32px 0;
 
-                img.anima {
-                    animation: anima .3s forwards ease-in-out;
+                img {
+                    transition: all 0.2s ease-in-out;
+
+                    &.anima {
+                        opacity: 0.5;
+                        transition: all 0.2s ease-in-out;
+                    }
                 }
 
                 @media only screen and (min-width: 768px) {
@@ -129,9 +123,11 @@ section {
                 font-size: 56px;
                 text-align: center;
                 margin-top: 1rem;
+                transition: all 0.2s ease-in-out;
 
                 &.anima {
-                    animation: anima .3s forwards ease-in-out;
+                    opacity: 0.5;
+                    transition: all 0.2s ease-in-out;
                 }
 
                 @media only screen and (min-width: 1200px) {
@@ -148,9 +144,11 @@ section {
                 color: $lilas;
                 padding-bottom: 20px;
                 border-bottom: 1px solid $lilas;
+                transition: all 0.2s ease-in-out;
 
                 &.anima {
-                    animation: anima .3s forwards ease-in-out;
+                    opacity: 0.5;
+                    transition: all 0.2s ease-in-out;
                 }
 
                 @media only screen and (min-width: 1200px) {
@@ -165,9 +163,11 @@ section {
                 align-items: center;
                 justify-content: center;
                 text-align: center;
+                transition: all 0.2s ease-in-out;
 
                 &.anima {
-                    animation: anima .3s forwards ease-in-out;
+                    opacity: 0.5;
+                    transition: all 0.2s ease-in-out;
                 }
 
                 @media only screen and (min-width: 768px) {

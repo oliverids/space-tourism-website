@@ -19,15 +19,17 @@ async function fetchInfo(index) {
             nome = document.getElementById('name'),
             bio = document.getElementById('bio');
 
-        image.src = r.crew[item].images.png;
-        role.innerText = r.crew[item].role;
-        nome.innerText = r.crew[item].name;
-        bio.innerText = r.crew[item].bio;
-
         [image, role, nome, bio].forEach(e => e.classList.add('anima'));
+       
+        setTimeout(() => {
+            image.src = r.crew[item].images.png;
+            role.innerText = r.crew[item].role;
+            nome.innerText = r.crew[item].name;
+            bio.innerText = r.crew[item].bio;
+        }, 210);
         setTimeout(() => {
             [image, role, nome, bio].forEach(e => e.classList.remove('anima'));
-        }, 400);
+        }, 300);
     });
 };
 
@@ -39,3 +41,4 @@ slideCrew.forEach(e => {
         fetchInfo(evt.currentTarget);
     });
 });
+
