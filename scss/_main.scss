@@ -65,9 +65,12 @@ main {
             }
 
             @media only screen and (min-width: 768px) {
-                margin: 0;
                 width: 200px;
                 height: 200px;
+            }
+
+            @media only screen and (min-width: 1200px) {
+                margin: 0;
             }
 
             &:hover {
