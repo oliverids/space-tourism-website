@@ -14,123 +14,192 @@ section {
         margin-top: 160px;
     }
 
-    .pic-tech {
+    @media only screen and (min-width: 1200px) {
+        max-width: 1000px;
+        margin: 160px auto 0 auto;
+        display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
-        text-transform: uppercase;
-        padding: 0;
+    }
 
-        h2 {
-            font-family: $barlow-cond;
-            font-weight: 400;
-            font-size: 1rem;
-            letter-spacing: 2.7px;
+    h2 {
+        font-family: $barlow-cond;
+        font-weight: 400;
+        font-size: 1rem;
+        letter-spacing: 2.7px;
 
-            @media only screen and (min-width: 1200px) {
-                margin-bottom: 2rem;
-            }
-
-            span {
-                opacity: 0.5;
-                margin-right: 12px;
-            }
+        @media only screen and (min-width: 1200px) {
+            margin-bottom: 2rem;
         }
 
-        .content {
-            width: 100%;
-            margin-top: 2rem;
-
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: contain;
-                transition: all 0.2s ease-in-out;
-
-                &.anima {
-                    opacity: 0.3;
-                    transition: all 0.2s ease-in-out;
-                }
-            }
+        span {
+            opacity: 0.5;
+            margin-right: 12px;
         }
     }
 
-    .content-tech {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding-bottom: 60px;
-
-        #slide-tech {
-            width: 160px;
-            margin: 2rem auto;
+    div {
+        @media only screen and (min-width: 1200px) {
             display: flex;
             justify-content: space-between;
             align-items: center;
+        }
 
-            li {
-                button {
-                    width: 40px;
-                    height: 40px;
-                    border-radius: 50%;
-                    border: 0.2px solid $lilas;
-                    color: $branco;
-                    transition: all 0.3s ease-in-out;
+        .pic-tech {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-transform: uppercase;
+            padding: 0;
 
-                    &.active {
-                        background: $branco;
-                        border-color: $branco;
-                        color: $preto;
-                        transition: all 0.3s ease-in-out;
+            @media only screen and (min-width: 1200px) {
+                order: 2;
+                width: 300px;
+            }
+
+            .content {
+                width: 100%;
+                margin-top: 2rem;
+                position: relative;
+
+                @media only screen and (min-width: 1200px) {
+                    margin-top: 0;
+                    height: 520px;
+                    width: 200%;
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    transition: all 0.2s ease-in-out;
+
+                    &.anima {
+                        opacity: 0.3;
+                        transition: all 0.2s ease-in-out;
+                    }
+
+                    @media only screen and (min-width: 1200px) {
+                        object-fit: cover;
+                        position: absolute;
+                        right: -120px;
+                        width: 510px;
+                        height: 520px;
+                        top: 0;
                     }
                 }
             }
         }
 
-        div {
+        .content-tech {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            text-align: center;
+            padding-bottom: 60px;
 
-            span {
-                font-size: 1rem;
-                text-transform: uppercase;
-                color: $lilas;
-                font-family: $barlow-cond;
-                letter-spacing: 2.4px;
-                margin-bottom: 0.8rem;
-                transition: all 0.2s ease-in-out;
+            @media only screen and (min-width: 1200px) {
+                flex-direction: row;
+            }
 
-                &.anima {
-                    opacity: 0.5;
-                    transition: all 0.2s ease-in-out;
+            #slide-tech {
+                width: 160px;
+                margin: 2rem auto;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                @media only screen and (min-width: 1200px) {
+                    flex-direction: column;
+                    width: 80px;
+                    height: 320px;
+                    margin-right: 2rem;
+                }
+
+                li {
+                    button {
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                        border: 0.2px solid $lilas;
+                        color: $branco;
+                        transition: all 0.3s ease-in-out;
+
+                        @media only screen and (min-width: 1200px) {
+                            width: 80px;
+                            height: 80px;
+                        }
+
+                        &.active {
+                            background: $branco;
+                            border-color: $branco;
+                            color: $preto;
+                            transition: all 0.3s ease-in-out;
+                        }
+                    }
                 }
             }
 
-            h1 {
-                font-size: 1.5rem;
-                margin-bottom: 1rem;
-                text-transform: uppercase;
-                transition: all 0.2s ease-in-out;
+            div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
 
-                &.anima {
-                    opacity: 0.5;
-                    transition: all 0.2s ease-in-out;
+                @media only screen and (min-width: 1200px) {
+                    text-align: left;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    width: 470px;
                 }
-            }
 
-            #text {
-                max-width: 460px;
-                font-family: $barlow;
-                color: $lilas;
-                transition: all 0.2s ease-in-out;
-
-                &.anima {
-                    opacity: 0.5;
+                span {
+                    font-size: 1rem;
+                    text-transform: uppercase;
+                    color: $lilas;
+                    font-family: $barlow-cond;
+                    letter-spacing: 2.4px;
+                    margin-bottom: 0.8rem;
                     transition: all 0.2s ease-in-out;
+
+                    &.anima {
+                        opacity: 0.5;
+                        transition: all 0.2s ease-in-out;
+                    }
+                }
+
+                h1 {
+                    font-size: 1.5rem;
+                    margin-bottom: 1rem;
+                    text-transform: uppercase;
+                    transition: all 0.2s ease-in-out;
+
+                    &.anima {
+                        opacity: 0.5;
+                        transition: all 0.2s ease-in-out;
+                    }
+
+                    @media only screen and (min-width: 768px) {
+                        font-size: 2.5rem;
+                    }
+
+                    @media only screen and (min-width: 1200px) {
+                        font-size: 3.5rem;
+                    }
+                }
+
+                #text {
+                    max-width: 460px;
+                    font-family: $barlow;
+                    color: $lilas;
+                    transition: all 0.2s ease-in-out;
+
+                    &.anima {
+                        opacity: 0.5;
+                        transition: all 0.2s ease-in-out;
+                    }
                 }
             }
         }

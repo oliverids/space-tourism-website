@@ -14,7 +14,7 @@ async function fetchInfo(index, lista) {
         setTimeout(() => {
             nome.innerText = r.technology[item].name;
             text.innerText = r.technology[item].description;
-            window.innerWidth < 1200 ? picture.src = r.technology[item].images.landscape : picture.src = r.technology[item].images.portrait;
+            window.innerWidth <= 1200 ? picture.src = r.technology[item].images.landscape : picture.src = r.technology[item].images.portrait;
         }, 210);
         setTimeout(() => {
             [nome, text, picture].forEach(e => e.classList.remove('anima'));
@@ -36,6 +36,6 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 let ativo;
 window.addEventListener('resize', () => {
-    ativo = document.querySelectorAll('#slide-tech li button.active');
-    fetchInfo(ativo, slideTech);
+    ativo = document.querySelector('#slide-tech li button.active');
+    if (window.innerWidth >= 1200) fetchInfo(ativo, slideTech);
 });
