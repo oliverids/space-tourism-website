@@ -11,7 +11,7 @@
 <p text-align="center">
  <a href="#desafio">O desafio</a> | 
  <a href="#tecnologias">Tecnologias</a> | 
- <a href="#imagens">Imagens</a> | 
+ <a href="#identidade">Identidade</a> | 
  <a href="#links">Links</a> |
  <a href="#redes">Redes</a>
 </p>
@@ -41,17 +41,17 @@ O usuário pode:
 
 ---
 
-#### Imagens
+#### Identidade
 
 <p>
 <div align="center">
-<h4>Identidade visual para desktop</h4>
+<h4>Para desktop</h4>
 <img src="Screenshot_1.png"/>
 </div>
 
 <p>
 <div align="center">
-<h4>Identidade visual para mobile e tablet</h4>
+<h4>Para mobile e tablet</h4>
 <img src="Screenshot_2.png"/>
 </div>
 

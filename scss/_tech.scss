@@ -9,6 +9,7 @@ body {
 section {
     margin-top: 124px;
     color: $branco;
+    padding-bottom: 60px;
 
     @media only screen and (min-width: 768px) {
         margin-top: 160px;
@@ -104,6 +105,7 @@ section {
 
             @media only screen and (min-width: 1200px) {
                 flex-direction: row;
+                padding-bottom: 0;
             }
 
             #slide-tech {
