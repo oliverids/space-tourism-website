@@ -4,7 +4,7 @@ async function fetchInfo(index) {
     let array = Array.from(destinations),
         item = array.indexOf(index);
 
-    fetch('../data.json').then(r => r.json()).then(r => {
+    fetch('./data.json').then(r => r.json()).then(r => {
         const image = document.querySelector('#image img'),
             planet = document.getElementById('planet'),
             text = document.getElementById('text'),

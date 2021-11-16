@@ -4,7 +4,7 @@ async function fetchInfo(index, lista) {
     let array = Array.from(lista),
         item = array.indexOf(index);
 
-    fetch('../data.json').then(r => r.json()).then(r => {
+    fetch('./data.json').then(r => r.json()).then(r => {
         const picture = document.querySelector('#picture img'),
             nome = document.getElementById('nome'),
             text = document.getElementById('text');

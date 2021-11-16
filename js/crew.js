@@ -13,7 +13,7 @@ async function fetchInfo(index) {
     let array = Array.from(slideCrew),
         item = array.indexOf(index);
 
-    fetch('../data.json').then(r => r.json()).then(r => {
+    fetch('./data.json').then(r => r.json()).then(r => {
         const image = document.querySelector('#person img'),
             role = document.getElementById('role'),
             nome = document.getElementById('name'),
