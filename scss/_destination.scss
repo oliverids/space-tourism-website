@@ -25,6 +25,17 @@ section {
             justify-content: space-between;
         }
 
+        @keyframes anima {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
         .pick {
             display: flex;
             flex-direction: column;
@@ -52,8 +63,7 @@ section {
                     transition: all 0.2s ease-in-out;
 
                     &.anima {
-                        opacity: 0.5;
-                        transition: all 0.2s ease-in-out;
+                        animation: anima .3s forwards ease-in-out;
                     }
                 }
 
@@ -126,8 +136,7 @@ section {
                 transition: all 0.2s ease-in-out;
 
                 &.anima {
-                    opacity: 0.5;
-                    transition: all 0.2s ease-in-out;
+                    animation: anima .3s forwards ease-in-out;
                 }
 
                 @media only screen and (min-width: 1200px) {
@@ -147,8 +156,7 @@ section {
                 transition: all 0.2s ease-in-out;
 
                 &.anima {
-                    opacity: 0.5;
-                    transition: all 0.2s ease-in-out;
+                    animation: anima .3s forwards ease-in-out;
                 }
 
                 @media only screen and (min-width: 1200px) {
@@ -166,8 +174,7 @@ section {
                 transition: all 0.2s ease-in-out;
 
                 &.anima {
-                    opacity: 0.5;
-                    transition: all 0.2s ease-in-out;
+                    animation: anima .3s forwards ease-in-out;
                 }
 
                 @media only screen and (min-width: 768px) {

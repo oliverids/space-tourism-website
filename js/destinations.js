@@ -11,17 +11,19 @@ async function fetchInfo(index) {
             avgDist = document.getElementById('avg-dist'),
             travelTime = document.getElementById('travel-time');
 
-        [image, planet, text, avgDist, travelTime].forEach(e => e.classList.add('anima'));
+            [image, planet, text, avgDist, travelTime].forEach(e => e.classList.add('anima'));
+
         setTimeout(() => {
             image.src = r.destinations[item].images.png;
             planet.innerText = r.destinations[item].name;
             text.innerText = r.destinations[item].description;
             avgDist.innerText = r.destinations[item].distance;
             travelTime.innerText = r.destinations[item].travel;
-        }, 210);
+        });
+
         setTimeout(() => {
-        [image, planet, text, avgDist, travelTime].forEach(e => e.classList.remove('anima'));
-        }, 300);
+            [image, planet, text, avgDist, travelTime].forEach(e => e.classList.remove('anima'));
+        }, 310);
     });
 };
 

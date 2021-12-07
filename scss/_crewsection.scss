@@ -80,8 +80,7 @@ section {
                     transition: all 0.2s ease-in-out;
 
                     &.anima {
-                        opacity: 0.5;
-                        transition: all 0.2s ease-in-out;
+                        animation: anima .3s forwards ease-in-out;
                     }
                 }
 
@@ -160,8 +159,7 @@ section {
                 transition: all 0.2s ease-in-out;
 
                 &.anima {
-                    opacity: 0.5;
-                    transition: all 0.2s ease-in-out;
+                    animation: anima .3s forwards ease-in-out;
                 }
 
                 @media only screen and (min-width: 768px) {
@@ -178,8 +176,7 @@ section {
                 transition: all 0.2s ease-in-out;
 
                 &.anima {
-                    opacity: 0.5;
-                    transition: all 0.2s ease-in-out;
+                    animation: anima .3s forwards ease-in-out;
                 }
 
                 @media only screen and (min-width: 768px) {
@@ -200,8 +197,7 @@ section {
                 transition: all 0.2s ease-in-out;
 
                 &.anima {
-                    opacity: 0.5;
-                    transition: all 0.2s ease-in-out;
+                    animation: anima .3s forwards ease-in-out;
                 }
 
                 @media only screen and (min-width: 768px) {

@@ -26,10 +26,11 @@ async function fetchInfo(index) {
             role.innerText = r.crew[item].role;
             nome.innerText = r.crew[item].name;
             bio.innerText = r.crew[item].bio;
-        }, 210);
+        });
+
         setTimeout(() => {
             [image, role, nome, bio].forEach(e => e.classList.remove('anima'));
-        }, 300);
+        }, 310);
     });
 };
 
